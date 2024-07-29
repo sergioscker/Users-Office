@@ -1,0 +1,27 @@
+{
+  "name": "api-users",
+  "version": "1.0.0",
+  "description": "api para cadastro de usuários.",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "node --watch server.js",
+    "vercel-build": "npx prisma generate"
+  },
+  "author": {
+    "name": "Sérgio Oliveira",
+    "url": "https://github.com/sergioliveira-developer"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.17.0"
+  }
+}
