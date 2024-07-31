@@ -26,10 +26,6 @@ const Users = () => {
     fetchUsers();
   }, []);
 
-  // function goBackPage() {
-  //   navigate('/');
-  // }
-
   async function deleteUser(userId) {
     await api.delete(`/users/${userId}`);
 
