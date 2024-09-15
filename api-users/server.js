@@ -19,9 +19,9 @@ app.get('/users', async (_, res) => {
 app.post('/users', async (req, res) => {
   const createUser = await prisma.user.create({
     data: {
-      email: req.body.email,
       name: req.body.name,
       age: req.body.age,
+      email: req.body.email,
     },
   });
 
@@ -35,9 +35,9 @@ app.put('/users/:id', async (req, res) => {
     },
 
     data: {
-      email: req.body.email,
       name: req.body.name,
       age: req.body.age,
+      email: req.body.email,
     },
   });
 
@@ -51,9 +51,9 @@ app.delete('/users/:id', async (req, res) => {
     },
 
     select: {
-      email: req.body.email,
       name: req.body.name,
       age: req.body.age,
+      email: req.body.email,
     },
   });
 

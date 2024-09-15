@@ -4,49 +4,65 @@ import Background from '../../assets/background 2.svg';
 export const Container = styled.div`
   background: url('${Background}');
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  justify-content: space-evenly;
+  padding: 20px;
 `;
 
 export const Image = styled.img`
   margin-top: 1.875rem;
 `;
 
-export const User = styled.li`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 1.25rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 0.875rem;
-  width: 21.37rem;
-  height: 3.625rem;
-  border: none;
-  
+export const UsersContent = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 40px 0;
 
-  p {
-    font-size: 1.5rem;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.75rem;
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const CardUsers = styled.div`
+  background-color: #252d48;
+  padding: 16px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 380px;
+
+  h3 {
     color: #fff;
+    font-size: 24px;
+    margin-bottom: 3px;
+    text-transform: capitalize; // transforma o texto com a primeira letra maiúscula
+  }
+  p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 200;
+  }
+`;
+
+export const AvatarUser = styled.img`
+  height: 80px;
+`;
+
+export const TrashIcon = styled.img`
+  cursor: pointer;
+  padding-left: 30px;
+
+  &:hover {
+    opacity: 0.8;
   }
 
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
+  &:active {
+    opacity: 0.5;
   }
 `;

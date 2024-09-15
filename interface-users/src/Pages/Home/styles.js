@@ -6,8 +6,8 @@ export const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
   background-color: #181f36;
-  height: 100%;
-  padding: 1.25rem;
+  min-height: 100vh;
+  padding: 2rem;
 `;
 
 export const TopBackground = styled.div`
